@@ -17,21 +17,32 @@ namespace Boardgame_database
     /// <summary>
     /// Interaction logic for CheckoutWindow.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class CheckoutWindow : Window
     {
-        public Window1()
+        public CheckoutWindow()
         {
+            //This is your object constructor. It will run imeediately when you call the new() method.
             InitializeComponent();
         }
 
-        private void Window1_OnLoaded(object sender, RoutedEventArgs e)
+        private void CheckoutWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            //This will call after the window fully loads
+            
+            // Throwing a "NotImplementedException" on load will crash your app because you haven't implemented the behavior.
+            // Good idea for buttons, not a good idea for load and unload.
+            //throw new NotImplementedException();
+
+            //Better option is to just make a comment like this
+            //todo Implement Load
         }
 
-        private void Window1_OnClosed(object? sender, EventArgs e)
+        private void CheckoutWindow_OnClosed(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //Same problem here with closing your window
+
+            //throw new NotImplementedException();
+            //todo Implement Unload
         }
     }
 }

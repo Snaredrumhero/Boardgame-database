@@ -25,7 +25,7 @@
 
         <Button Grid.Column="1" Grid.Row="1" Name="CheckoutButton" Content="Check Out" FontSize="22"
                 Background="OrangeRed" Click="CheckoutButton_Click"/>
-        <Button Grid.Column="1" Grid.Row="3" Name="CheckinButton" Content="Check Out" FontSize="22"
+        <Button Grid.Column="1" Grid.Row="3" Name="CheckinButton" Content="Check In" FontSize="22"
                 Background="GreenYellow" Click="CheckinButton_Click"/>
         <Button Grid.Column="3" Grid.Row="1" Name="CheckoutReview" Content="Review Checked Out Games" FontSize="18"
                 Background="Yellow" Click="CheckoutReview_Click"/>
