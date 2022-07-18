@@ -27,7 +27,7 @@ namespace Boardgame_database
 
         private void CheckoutButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("The Checkout Button click event has triggered");
+            //MessageBox.Show("The Checkout Button click event has triggered");
 
 
             CheckoutWindow cW = new() { Owner = this };
@@ -37,7 +37,7 @@ namespace Boardgame_database
             // The "this" keyword just means "the current object". Like "self" in python.
 
             //.Show() will open the window and return immediately, allowing people to continue working on the main window
-            // Howevder, for something like this, we probably don't want that, so it makes more sense to block this method until we finish our checkout
+            // However, for something like this, we probably don't want that, so it makes more sense to block this method until we finish our checkout
             // ShowDialog will not return until the new window calls the "Close" event
             cW.ShowDialog();
         }
@@ -46,7 +46,6 @@ namespace Boardgame_database
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("The window has opened");
 
             //todo Remove this
             CheckoutReview.Content += Environment.NewLine + "Clicked: 0 Times";
@@ -54,17 +53,22 @@ namespace Boardgame_database
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            MessageBox.Show("The window has closed");
+
         }
 
         private void CheckinButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("The Checkin Button click event has triggered");
+            //MessageBox.Show("The Checkin Button click event has triggered");
+            CheckinWindow cW = new() {Owner = this};
+            cW.ShowDialog();
         }
 
         private void CheckoutReview_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("The Checkout Review Button click event has triggered");
+            //MessageBox.Show("The Checkout Review Button click event has triggered");
+
+            ReviewWindow rW = new() { Owner = this};
+            rW.ShowDialog();
 
             //todo Remove this
             ++reviewClicked;
@@ -73,7 +77,10 @@ namespace Boardgame_database
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("The Search Button click event has triggered");
+            //MessageBox.Show("The Search Button click event has triggered");
+            SearchWindow sW = new() { Owner = this};
+            sW.ShowDialog();
+            
         }
     }
 }

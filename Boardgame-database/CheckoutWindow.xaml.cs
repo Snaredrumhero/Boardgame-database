@@ -21,7 +21,7 @@ namespace Boardgame_database
     {
         public CheckoutWindow()
         {
-            //This is your object constructor. It will run imeediately when you call the new() method.
+            //This is your object constructor. It will run immediately when you call the new() method.
             InitializeComponent();
         }
 
@@ -42,6 +42,16 @@ namespace Boardgame_database
             //Same problem here with closing your window
 
             //throw new NotImplementedException();
+            //todo Implement Unload
+        }
+
+        private void CloseWindowButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            //todo Implement Unload
+        }
+
+        private void EnterDataButton_OnClick(object sender, RoutedEventArgs e)
+        {
             //todo Implement Unload
         }
     }

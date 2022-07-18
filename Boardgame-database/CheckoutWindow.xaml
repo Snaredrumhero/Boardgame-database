@@ -8,10 +8,32 @@
         Title="checkoutWindow" Height="450" Width="800" Loaded="CheckoutWindow_OnLoaded" Closed="CheckoutWindow_OnClosed" >
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width ="*"/>
+            <ColumnDefinition Width ="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
+        
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Date Borrowed:" FontSize="40" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Background="AntiqueWhite"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Login:" FontSize="40" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Background="AntiqueWhite"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="GameID:" FontSize="40" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Background="AntiqueWhite"/>
+        
+        <Button Grid.Row="4" Grid.Column="1" Name="CloseWindowButton" Content="Close" FontSize="22"
+                Background="DarkGray" Click="CloseWindowButton_OnClick"/>
+        <Button Grid.Row="4" Grid.Column="2" Name="EnterDataButton" Content="Enter" FontSize="22"
+                Background="GreenYellow" Click="EnterDataButton_OnClick"/>
+        
     </Grid>
 </Window>
