@@ -30,11 +30,11 @@
         <TextBlock Grid.Row="3" Grid.Column="1" Text="GameID:" FontSize="40" 
                    HorizontalAlignment="Center" VerticalAlignment="Center" Background="AntiqueWhite"/>
 
-        <TextBox Grid.Row="1" Grid.Column="2" Text="Enter:" FontSize="20" VerticalAlignment="Center"
+        <TextBox Grid.Row="1" Grid.Column="2" FontSize="20" VerticalAlignment="Center"
                  Name="DateBox" TextInput="DateBox_OnTextInput"/>
-        <TextBox Grid.Row="2" Grid.Column="2" Text="Enter:" FontSize="20" VerticalAlignment="Center"
+        <TextBox Grid.Row="2" Grid.Column="2" FontSize="20" VerticalAlignment="Center"
                  Name="LoginBox" TextInput="LoginBox_OnTextInput"/>
-        <TextBox Grid.Row="3" Grid.Column="2" Text="Enter:" FontSize="20" VerticalAlignment="Center"
+        <TextBox Grid.Row="3" Grid.Column="2" FontSize="20" VerticalAlignment="Center"
                  Name="IdBox" TextInput="IdBox_OnTextInput"/>
 
         <Button Grid.Row="4" Grid.Column="1" Name="CloseWindowButton" Content="Close" FontSize="22"

@@ -23,8 +23,8 @@
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="2" Grid.Column="1" Text="Search:" FontSize="25" VerticalAlignment="Center"
-               Name="Searchbar" TextInput="Searchbar_OnTextInput"/>
+        <TextBox Grid.Row="2" Grid.Column="1"  FontSize="25" VerticalAlignment="Center"
+               Name="Searchbar" TextInput="Searchbar_OnTextInput" Background="Yellow"/>
 
         <ComboBox Grid.Row="2" Grid.Column="2" Name="SearchbarDropMenu" VerticalAlignment="Center"
                   SelectionChanged="SearchbarDropMenu_OnSelectionChanged">

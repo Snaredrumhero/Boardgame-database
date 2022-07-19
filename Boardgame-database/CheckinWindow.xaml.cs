@@ -34,7 +34,6 @@ namespace Boardgame_database
         private void EnterCheckinButton_OnClick(object sender, RoutedEventArgs e)
         {
             //todo Implement Unload
-            Searchbar.Text = "Search"; // Replace the Searchbar's text
             Searchbar.Focus(); // Refocus the keyboard onto Searchbar
             Searchbar.SelectAll();
         }
@@ -47,6 +46,10 @@ namespace Boardgame_database
         private void SearchbarDropMenu_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //todo Implement Unload
+            
+
+            Searchbar.Focus(); // Refocus the keyboard onto Searchbar
+            Searchbar.SelectAll();
         }
     }
 }
