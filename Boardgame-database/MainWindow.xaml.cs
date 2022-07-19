@@ -82,5 +82,10 @@ namespace Boardgame_database
             sW.ShowDialog();
             
         }
+
+        private void SaveData_OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Save Data has been pressed");
+        }
     }
 }

@@ -60,8 +60,6 @@ namespace Boardgame_database
         private void EnterDataButton_OnClick(object sender, RoutedEventArgs e)
         {
             //todo Implement Unload
-            DateBox.Text = LoginBox.Text = IdBox.Text = "Enter:"; // Replaces all text within the textboxes
-
             DateBox.Focus(); // Focus back onto DateBox
             DateBox.SelectAll();
         }
