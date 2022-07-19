@@ -19,11 +19,12 @@ namespace Boardgame_database
     /// </summary>
     public partial class CheckinWindow : Window
     {
+        private readonly List<string> gamesList = new(){ "Ticket to Ride", "Mysterium", "Monopoly", "Magic the Gathering", "Werewolf" };
+        
         public CheckinWindow()
         {
             InitializeComponent();
-            Searchbar.Focus();
-            Searchbar.SelectAll();
+            Searchbar.TextChanged += Searchbar_OnTextChanged;
         }
 
         private void CloseWindowButton_OnClick(object sender, RoutedEventArgs e)
@@ -34,7 +35,7 @@ namespace Boardgame_database
         private void EnterCheckinButton_OnClick(object sender, RoutedEventArgs e)
         {
             //todo Implement Unload
-            Searchbar.Text = "Search"; // Replace the Searchbar's text
+            //Searchbar.Text = "Search"; // Replace the Searchbar's text
             Searchbar.Focus(); // Refocus the keyboard onto Searchbar
             Searchbar.SelectAll();
         }
@@ -47,6 +48,20 @@ namespace Boardgame_database
         private void SearchbarDropMenu_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //todo Implement Unload
+        }
+
+        private void Searchbar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            ResultsListBox.ItemsSource = gamesList.Where(z => z.ToLower().Contains(Searchbar.Text.ToLower()));
+
+            ResultsListBox.SelectedIndex = 0;
+        }
+
+        private void CheckinWindow_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            Searchbar.Focus();
+            Searchbar.SelectAll();
+            ResultsListBox.ItemsSource = gamesList;
         }
     }
 }

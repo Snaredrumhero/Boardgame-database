@@ -4,13 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Boardgame_database"
-        mc:Ignorable="d"
+        mc:Ignorable="d" Loaded="CheckinWindow_OnLoaded"
         Title="CheckinWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height ="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="10"/>
@@ -19,19 +19,20 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="10"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="2" Grid.Column="1" Text="Search:" FontSize="25" VerticalAlignment="Center"
+        <TextBox Grid.Row="1" Grid.Column="2" Text="" FontSize="25" VerticalAlignment="Center"
                Name="Searchbar" TextInput="Searchbar_OnTextInput"/>
 
-        <ComboBox Grid.Row="2" Grid.Column="2" Name="SearchbarDropMenu" VerticalAlignment="Center"
+        <ComboBox Grid.Row="1" Grid.Column="1" Name="SearchbarDropMenu" VerticalAlignment="Center"
                   SelectionChanged="SearchbarDropMenu_OnSelectionChanged">
             <ComboBoxItem Content="Game Name"/>
             <ComboBoxItem Content="Common Name"/>
             <ComboBoxItem Content="Game ID"/>
         </ComboBox>
+        <ListBox Grid.Row="3" Grid.Column="2" Name="ResultsListBox"/>
 
 
         <Button Grid.Row="4" Grid.Column="1" Name="CloseWindowButton" Content="Close" FontSize="22"
