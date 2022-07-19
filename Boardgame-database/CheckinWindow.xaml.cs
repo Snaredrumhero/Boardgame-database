@@ -23,7 +23,6 @@ namespace Boardgame_database
         {
             InitializeComponent();
             Searchbar.Focus();
-            Searchbar.SelectAll();
         }
 
         private void CloseWindowButton_OnClick(object sender, RoutedEventArgs e)

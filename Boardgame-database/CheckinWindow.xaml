@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height ="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="10"/>
@@ -18,15 +18,22 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="10"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="2" Grid.Column="1"  FontSize="25" VerticalAlignment="Center"
-               Name="Searchbar" TextInput="Searchbar_OnTextInput" Background="Yellow"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="Search: " FontSize="15"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Relevant Items:" FontSize="15"
+                   VerticalAlignment="Center"/>
 
-        <ComboBox Grid.Row="2" Grid.Column="2" Name="SearchbarDropMenu" VerticalAlignment="Center"
+        <TextBox Grid.Row="2" Grid.Column="2" FontSize="25" VerticalAlignment="Center"
+               Name="Searchbar" TextInput="Searchbar_OnTextInput" Background="Yellow"/>
+        <TextBlock Grid.Row="3" Grid.Column="2" FontSize="20" Name="Results"/>
+
+        <ComboBox Grid.Row="2" Grid.Column="3" Name="SearchbarDropMenu" VerticalAlignment="Center"
                   SelectionChanged="SearchbarDropMenu_OnSelectionChanged">
             <ComboBoxItem Content="Game Name"/>
             <ComboBoxItem Content="Common Name"/>
@@ -34,9 +41,9 @@
         </ComboBox>
 
 
-        <Button Grid.Row="4" Grid.Column="1" Name="CloseWindowButton" Content="Close" FontSize="22"
+        <Button Grid.Row="4" Grid.Column="2" Name="CloseWindowButton" Content="Close" FontSize="22"
                 Background="DarkGray" Click="CloseWindowButton_OnClick"/>
-        <Button Grid.Row="4" Grid.Column="2" Name="EnterCheckinButton" Content="Enter" FontSize="22"
+        <Button Grid.Row="4" Grid.Column="3" Name="EnterCheckinButton" Content="Enter" FontSize="22"
                 Background="GreenYellow" Click="EnterCheckinButton_OnClick"/>
     </Grid>
 </Window>
