@@ -35,7 +35,23 @@ namespace Boardgame_database
         private void EnterCheckinButton_OnClick(object sender, RoutedEventArgs e)
         {
             //todo Implement Unload
-            //Searchbar.Text = "Search"; // Replace the Searchbar's text
+
+            if (!(sender is Button button))
+            {
+                MessageBox.Show(new NullReferenceException().Message);
+            }
+            else switch (button.Content.ToString())
+            {
+                case "Sure?":
+                    button.Content = "Enter";
+                    return;
+                case "Enter":
+                {
+                    button.Content = "Sure?";
+                    return;
+                }
+            }
+
             Searchbar.Focus(); // Refocus the keyboard onto Searchbar
             Searchbar.SelectAll();
         }

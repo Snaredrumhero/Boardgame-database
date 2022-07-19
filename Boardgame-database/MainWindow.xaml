@@ -35,8 +35,7 @@
                 Background="Yellow" Click="CheckoutReview_Click"/>
         <Button Grid.Column="3" Grid.Row="3" Name="Search" Content="Search Game Library" FontSize="22"
                 Background="NavajoWhite" Click="Search_Click"/>
-        <Button Grid.Row="2" Grid.Column="2" Name="SaveData" Click="SaveData_OnClick">
-            <Image Source="C:\Users\dm247120\Downloads\1628712852796.jpg"/>
-        </Button>
+        <Image Grid.Row="2" Grid.Column="2" Source="C:\Users\dm247120\Downloads\1628712852796.jpg"/>
+        
     </Grid>
 </Window>
