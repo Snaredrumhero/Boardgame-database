@@ -23,16 +23,16 @@
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Row="2" Grid.Column="1" Text="Search:" FontSize="20" VerticalAlignment="Center"
+        <TextBox Grid.Row="2" Grid.Column="1" Text="Search:" FontSize="25" VerticalAlignment="Center"
                Name="Searchbar" TextInput="Searchbar_OnTextInput"/>
 
-            <!--<TextBox.ContextMenu>
-                //<ContextMenu>
-                    <MenuItem Header="Common Name" IsCheckable="True"/>
-                    <MenuItem Header="Game Name" IsCheckable="True"/>
-                    <MenuItem Header="Game ID" IsCheckable="True"/>
-                </ContextMenu>
-            </TextBox.ContextMenu>-->
+        <ComboBox Grid.Row="2" Grid.Column="2" Name="SearchbarDropMenu" VerticalAlignment="Center"
+                  SelectionChanged="SearchbarDropMenu_OnSelectionChanged">
+            <ComboBoxItem Content="Game Name"/>
+            <ComboBoxItem Content="Common Name"/>
+            <ComboBoxItem Content="Game ID"/>
+        </ComboBox>
+
 
         <Button Grid.Row="4" Grid.Column="1" Name="CloseWindowButton" Content="Close" FontSize="22"
                 Background="DarkGray" Click="CloseWindowButton_OnClick"/>

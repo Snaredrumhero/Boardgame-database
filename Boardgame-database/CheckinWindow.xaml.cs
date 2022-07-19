@@ -43,5 +43,10 @@ namespace Boardgame_database
         {
             //todo Implement Unload
         }
+
+        private void SearchbarDropMenu_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //todo Implement Unload
+        }
     }
 }
