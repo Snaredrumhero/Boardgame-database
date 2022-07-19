@@ -54,5 +54,20 @@ namespace Boardgame_database
         {
             //todo Implement Unload
         }
+
+        private void DateBox_OnTextInput(object sender, TextCompositionEventArgs e)
+        {
+            //todo Implement Unload
+        }
+
+        private void LoginBox_OnTextInput(object sender, TextCompositionEventArgs e)
+        {
+            //todo Implement Unload
+        }
+
+        private void IdBox_OnTextInput(object sender, TextCompositionEventArgs e)
+        {
+            //todo Implement Unload
+        }
     }
 }
