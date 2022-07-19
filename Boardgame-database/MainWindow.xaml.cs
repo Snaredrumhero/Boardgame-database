@@ -67,7 +67,7 @@ namespace Boardgame_database
         {
             //MessageBox.Show("The Checkout Review Button click event has triggered");
 
-            ReviewWindow rW = new() { Owner = this};
+            ReviewWindow rW = new() { Owner = this };
             rW.ShowDialog();
 
             //todo Remove this

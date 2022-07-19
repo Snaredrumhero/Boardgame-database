@@ -19,10 +19,15 @@ namespace Boardgame_database
     /// </summary>
     public partial class CheckoutWindow : Window
     {
+        private string Date;
+        private string Login;
+        private string GameId;
         public CheckoutWindow()
         {
             //This is your object constructor. It will run immediately when you call the new() method.
             InitializeComponent();
+            DateBox.Focus();
+            DateBox.SelectAll();
         }
 
         private void CheckoutWindow_OnLoaded(object sender, RoutedEventArgs e)
@@ -43,16 +48,22 @@ namespace Boardgame_database
 
             //throw new NotImplementedException();
             //todo Implement Unload
+
+            
         }
 
         private void CloseWindowButton_OnClick(object sender, RoutedEventArgs e)
         {
-            //todo Implement Unload
+            Close();
         }
 
         private void EnterDataButton_OnClick(object sender, RoutedEventArgs e)
         {
             //todo Implement Unload
+            DateBox.Text = LoginBox.Text = IdBox.Text = "Enter:"; // Replaces all text within the textboxes
+
+            DateBox.Focus(); // Focus back onto DateBox
+            DateBox.SelectAll();
         }
 
         private void DateBox_OnTextInput(object sender, TextCompositionEventArgs e)
@@ -63,6 +74,7 @@ namespace Boardgame_database
         private void LoginBox_OnTextInput(object sender, TextCompositionEventArgs e)
         {
             //todo Implement Unload
+            
         }
 
         private void IdBox_OnTextInput(object sender, TextCompositionEventArgs e)

@@ -22,6 +22,26 @@ namespace Boardgame_database
         public CheckinWindow()
         {
             InitializeComponent();
+            Searchbar.Focus();
+            Searchbar.SelectAll();
+        }
+
+        private void CloseWindowButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void EnterCheckinButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            //todo Implement Unload
+            Searchbar.Text = "Search"; // Replace the Searchbar's text
+            Searchbar.Focus(); // Refocus the keyboard onto Searchbar
+            Searchbar.SelectAll();
+        }
+
+        private void Searchbar_OnTextInput(object sender, TextCompositionEventArgs e)
+        {
+            //todo Implement Unload
         }
     }
 }

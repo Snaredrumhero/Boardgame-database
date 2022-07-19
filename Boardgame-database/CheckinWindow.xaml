@@ -7,6 +7,36 @@
         mc:Ignorable="d"
         Title="CheckinWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height ="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="2" Grid.Column="1" Text="Search:" FontSize="20" VerticalAlignment="Center"
+               Name="Searchbar" TextInput="Searchbar_OnTextInput"/>
+
+            <!--<TextBox.ContextMenu>
+                //<ContextMenu>
+                    <MenuItem Header="Common Name" IsCheckable="True"/>
+                    <MenuItem Header="Game Name" IsCheckable="True"/>
+                    <MenuItem Header="Game ID" IsCheckable="True"/>
+                </ContextMenu>
+            </TextBox.ContextMenu>-->
+
+        <Button Grid.Row="4" Grid.Column="1" Name="CloseWindowButton" Content="Close" FontSize="22"
+                Background="DarkGray" Click="CloseWindowButton_OnClick"/>
+        <Button Grid.Row="4" Grid.Column="2" Name="EnterCheckinButton" Content="Enter" FontSize="22"
+                Background="GreenYellow" Click="EnterCheckinButton_OnClick"/>
     </Grid>
 </Window>
