@@ -48,6 +48,10 @@ namespace Boardgame_database
         private void SearchbarDropMenu_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //todo Implement Unload
+            
+
+            Searchbar.Focus(); // Refocus the keyboard onto Searchbar
+            Searchbar.SelectAll();
         }
 
         private void Searchbar_OnTextChanged(object sender, TextChangedEventArgs e)
